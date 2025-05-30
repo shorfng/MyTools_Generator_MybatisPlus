@@ -32,7 +32,7 @@ public class CodeGenerator_Oracle {
 
                 // 全局配置
                 .globalConfig(builder -> {
-                    builder.author("")         // 设置作者
+                    builder.author("蓝田_Loto")         // 设置作者
                             //.enableSwagger() // 开启 swagger 模式
                             .outputDir(System.getProperty("user.dir") + "/src/main/java")  // 指定输出目录
                             .dateType(DateType.ONLY_DATE)               // 时间策略（ONLY_DATE，SQL_PACK，TIME_PACK）
@@ -62,15 +62,16 @@ public class CodeGenerator_Oracle {
 
                 // 策略配置
                 .strategyConfig(builder ->
-                                builder.addInclude("PROD_AGENCY_BASE") // 设置需要生成的表名
-                        //.addTablePrefix("t_", "c_") // 设置过滤表前缀
-                        //.likeTable()     // 包含表名
-                        //.notLikeTable()  // 不包含表名
-                        //.addExclude("xxx")  // 设置不需要生成的表名
-                        //.addTableSuffix("xxx")  // 设置过滤表后缀
-                        //.enableCapitalMode()  // 开启大写命名
-                        //.enableSkipView()     // 开启跳过视图
-                        //.disableSqlFilter()   // 禁用sql过滤
+                        builder.addInclude("表名") // 设置需要生成的表名
+                                //.addTablePrefix("t_", "c_") // 设置过滤表前缀
+                                //.likeTable()            // 包含表名
+                                //.notLikeTable()         // 不包含表名
+                                //.addExclude("xxx")      // 设置不需要生成的表名
+                                //.addTableSuffix("xxx")  // 设置过滤表后缀
+                                //.enableCapitalMode()    // 开启大写命名
+                                //.enableSkipView()       // 开启跳过视图
+                                //.disableSqlFilter()     // 禁用sql过滤
+                                .entityBuilder().enableLombok() // 开启 lombok 模型
                 )
 
                 // 引擎模板
