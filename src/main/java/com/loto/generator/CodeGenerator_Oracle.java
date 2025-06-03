@@ -34,6 +34,7 @@ public class CodeGenerator_Oracle {
                 .globalConfig(builder -> {
                     builder.author("蓝田_Loto")         // 设置作者
                             //.enableSwagger() // 开启 swagger 模式
+                            .enableSpringdoc() // 开启 springdoc 模式
                             .outputDir(System.getProperty("user.dir") + "/src/main/java")  // 指定输出目录
                             .dateType(DateType.ONLY_DATE)               // 时间策略（ONLY_DATE，SQL_PACK，TIME_PACK）
                             .commentDate("yyyy-MM-dd HH:mm:ss")  // 注释日期

@@ -75,39 +75,18 @@
             <version>1.18.30</version>
         </dependency>
 
-        <!--Swagger2-->
-        <!--访问路径：http://localhost:端口号/swagger-ui.html-->
+        <!-- swagger 3 版本兼容 Spring Boot 2.7.x + jdk8 -->
+        <!-- 去除swagger-ui，在ApiFox中使用http://ip:port/v3/api-docs -->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.9.2</version>
-        </dependency>
-
-        <!-- swagger图形化接口 -->
-        <!--访问路径：http://localhost:端口号/doc.html-->
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>swagger-bootstrap-ui</artifactId>
-            <version>1.9.6</version>
-        </dependency>
-
-        <!-- 两个配置解决 NumberFormatException -->
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-annotations</artifactId>
-            <version>1.5.22</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-models</artifactId>
-            <version>1.5.22</version>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.6.9</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>swagger-ui</artifactId>
+                    <groupId>org.webjars</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!--模板工具包-->
